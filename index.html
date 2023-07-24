@@ -258,8 +258,9 @@
                                 at quae accusantium rem incidunt.
                             </span>
                             <div class="col mt-4 d-flex justify-content-start">
-                                <a href="#" class="custom-button me-3 text-uppercase">See More</a>
-                                <a href="whatsapp://send?text=Hello World!&phone=+6285217441749" class="outline-button me-3 text-uppercase">Start Chat</a>
+                                <a id="seeMoreButton" class="custom-button me-3 text-uppercase">See More</a>
+                                <a href="whatsapp://send?text=Hey Theodhore can help?&phone=+6285217441749"
+                                    class="outline-button me-3 text-uppercase">Start Chat</a>
                             </div>
                         </div>
                     </div>
@@ -272,7 +273,7 @@
 
 
             <!-- Section 2 -->
-            <div class="row centerz mb-5">
+            <div class="row centerz mb-5" id="scrollingTarget">
                 <h2 class="text-light fw-semibold mb-5 pt-4">What im doing.</h2>
                 <div class="row centerz">
                     <div class="col-md-4 mb-4">
@@ -553,13 +554,17 @@
                 <div class="col">
                     <div class="row centerz mb-3">
                         <div class="col-4">
-                            <a class="text-center d-block mx-auto" href="https://www.instagram.com/theodhoreee"><img src="asset/image/INSTA.png" alt="" class="img-fluid" style="max-width: 2rem;"></a>
+                            <a class="text-center d-block mx-auto" href="https://www.instagram.com/theodhoreee"><img
+                                    src="asset/image/INSTA.png" alt="" class="img-fluid" style="max-width: 2rem;"></a>
                         </div>
                         <div class="col-4">
-                            <a class="text-center d-block mx-auto" href="mailto:theodhore76@gmail.com?subject=Hey%20Theodhore%20can%20help?%20"><img src="asset/image/MAIL.png" alt="" class="img-fluid" style="max-width: 2rem;"></a>
+                            <a class="text-center d-block mx-auto"
+                                href="mailto:theodhore76@gmail.com?subject=Hey%20Theodhore%20can%20help?%20"><img
+                                    src="asset/image/MAIL.png" alt="" class="img-fluid" style="max-width: 2rem;"></a>
                         </div>
                         <div class="col-4">
-                            <a class="text-center d-block mx-auto" href="#"><img src="asset/image/LINKEDIN.png" alt="" class="img-fluid" style="max-width: 2rem;"></a>
+                            <a class="text-center d-block mx-auto" href="#"><img src="asset/image/LINKEDIN.png" alt=""
+                                    class="img-fluid" style="max-width: 2rem;"></a>
                         </div>
                     </div>
                     <h5 class="fw-semibold my-4 text-center">Made with ❤️ By Theodhore</h5>
@@ -568,6 +573,15 @@
         </div>
     </div>
     <script src="asset/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("#seeMoreButton").click(function () {
+                document.getElementById("scrollingTarget").scrollIntoView({ behavior: "smooth" })
+            })
+        });
+    </script>
 </body>
 
 </html>
