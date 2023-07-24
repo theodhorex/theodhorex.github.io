@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="asset/bootstrap/bootstrap.min.css">
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .logo {
+            position: relative;
+            min-width: 80vmin;
+            min-height: 80vmin;
+            display: block;
+            margin: auto;
+        }
+
+        .logo::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            display: inline-block;
+            --col1: #a5bc1f;
+            --col2: #99ae21;
+            --col3: #707d28;
+            --col4: #4a4f2d;
+            --c1: var(--col1);
+            --c2: var(--col2);
+            --c3: var(--col3);
+            --c4: var(--col4);
+            background-image: radial-gradient(var(--c1) 0 10%, var(--c2) 10% 20%, var(--c3) 20% 30%, var(--c4) 30% 40%, transparent 40% 100%);
+        }
+
+        .logo::before {
+            animation: ripple 4s linear;
+        }
+
+        @keyframes ripple {
+            0% {
+                --c2: transparent;
+                --c3: transparent;
+                --c4: transparent;
+                --c1: var(--col1);
+            }
+
+            33.33% {
+                --c2: var(--col2);
+            }
+
+            66.66% {
+                --c3: var(--col3);
+            }
+
+            100% {
+                --c4: var(--col4);
+            }
+        }
+
+        :root {
+            --button-font-size: 16px;
+            --button-padding: 10px 20px;
+        }
+
+        .custom-button {
+            padding: var(--button-padding);
+            font-size: var(--button-font-size);
+            font-weight: bold;
+            color: black;
+            text-decoration: none;
+            background-color: #94F3E4;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .custom-button:hover {
+            background-color: #90F3C9;
+        }
+
+        .custom-button:focus {
+            outline: none;
+        }
+
+        .outline-button {
+            padding: var(--button-padding);
+            font-size: var(--button-font-size);
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            border: 2px solid white;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .outline-button:hover {
+            background-color: white;
+            color: black;
+            border: 2px solid transparent;
+        }
+
+        .outline-button:focus {
+            outline: none;
+        }
+
+        /* Media queries untuk membuat tombol responsif */
+        @media screen and (max-width: 600px) {
+            :root {
+                --button-font-size: 14px;
+                --button-padding: 8px 16px;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            :root {
+                --button-font-size: 12px;
+                --button-padding: 6px 12px;
+            }
+        }
+
+        /* Buat class "logo" responsif */
+        .logo {
+            width: 80vmin;
+            height: 80vmin;
+            max-width: 400px;
+            max-height: 400px;
+            margin: auto;
+        }
+
+        /* Buat class "custom-button" dan "outline-button" responsif */
+        .custom-button,
+        .outline-button {
+            font-size: 16px;
+            padding: 10px 20px;
+        }
+
+        /* Media queries untuk membuat tombol dan logo responsif */
+        @media screen and (max-width: 600px) {
+
+            .custom-button,
+            .outline-button {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+
+            .logo {
+                width: 60vmin;
+                height: 60vmin;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+
+            .custom-button,
+            .outline-button {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+
+            .logo {
+                width: 50vmin;
+                height: 50vmin;
+            }
+        }
+
+        /* Gambar responsif */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Font ukuran responsif */
+        h1 {
+            font-size: 36px;
+        }
+
+        h2 {
+            font-size: 28px;
+        }
+
+        h3 {
+            font-size: 22px;
+        }
+
+        h5 {
+            font-size: 18px;
+        }
+    </style>
+    <title>Aurelio Theodhore Riyanto | Junior Web Dev</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg py-4 mb-5" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="https://www.pngkit.com/png/full/12-128651_vintage-floral-style-design-6-clipart-free-download.png"
+                        alt="" class="img-fluid p-0 m-0" style="max-width: 4rem;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav px-4">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Disabled</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Section 1 -->
+        <div class="row px-2">
+            <div class="col-md-6 mb-5">
+                <h5 class="text-secondary text-uppercase fw-semibold">Hey there!</h5>
+                <h1 class="text-light fw-semibold">I'm Theodhore work as Junior Web Dev</h1>
+                <div class="row ps-5 mt-5">
+                    <div class="col-10 border border-3 border-top-0 border-end-0 border-bottom-0 ps-4">
+                        <span class="text-secondary">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ipsum illo quis possimus
+                            quibusdam
+                            veritatis cumque eaque iure laudantium quam consequatur modi nihil libero error minus optio,
+                            et quo
+                            at quae accusantium rem incidunt.
+                        </span>
+                        <div class="">
+                            <div class="col mt-4 d-flex justify-content-start">
+                                <a href="#" class="custom-button me-3 text-uppercase">See More</a>
+                                <a href="#" class="outline-button me-3 text-uppercase">Start Chat</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="https://www.pngkit.com/png/full/12-128651_vintage-floral-style-design-6-clipart-free-download.png"
+                    alt="" class="img-fluid">
+            </div>
+        </div>
+
+
+        <!-- Section 2 -->
+        <div class="row px-2 mb-5">
+            <h2 class="text-light fw-semibold pb-5 pt-4">What im doing.</h2>
+            <div class="row">
+                <div class="col-md mb-4">
+                    <div class="card d-block mx-auto"
+                        style="width: 27rem; background-color: #333F44; border-radius: 2px;">
+                        <h3 class="text-center text-light fw-semibold p-3 pt-4">Developing</h3>
+                        <div class="card-body">
+                            <p class="card-text text-light px-3" style="text-align: justify;">Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Repudiandae molestiae
+                                cumque dolorum, ducimus itaque debitis perspiciatis nam earum nulla laborum doloremque
+                                beatae
+                                eligendi accusamus voluptates vitae provident optio iste a. Molestiae ducimus
+                                necessitatibus
+                                omnis, ex inventore magni consequatur amet laboriosam nesciunt voluptatem placeat quos
+                                itaque!.
+                            </p>
+                            <img src="https://www.pngkit.com/png/full/12-128651_vintage-floral-style-design-6-clipart-free-download.png"
+                                alt="" class="img-fluid d-block mx-auto" style="max-width: 20vw;">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md mb-4">
+                    <div class="card d-block mx-auto"
+                        style="width: 27rem; background-color: #333F44; border-radius: 2px;">
+                        <h3 class="text-center text-light fw-semibold p-3 pt-4">Make Design</h3>
+                        <div class="card-body">
+                            <p class="card-text text-light px-3" style="text-align: justify;">Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Repudiandae molestiae
+                                cumque dolorum, ducimus itaque debitis perspiciatis nam earum nulla laborum doloremque
+                                beatae
+                                eligendi accusamus voluptates vitae provident optio iste a.uatur amet laboriosam
+                                nesciunt
+                                voluptatem placeat quos itaque!.
+                            </p>
+                            <img src="https://www.pngkit.com/png/full/12-128651_vintage-floral-style-design-6-clipart-free-download.png"
+                                alt="" class="img-fluid d-block mx-auto" style="max-width: 20vw;">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md mb-4">
+                    <div class="card d-block mx-auto"
+                        style="width: 27rem; background-color: #333F44; border-radius: 2px;">
+                        <h3 class="text-center text-light fw-semibold p-3 pt-4">Deploying</h3>
+                        <div class="card-body">
+                            <p class="card-text text-light px-3" style="text-align: justify;">Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Repudiandae molestiae
+                                cumque dolorum, ducimus itaque debitis perspiciatis nam earum laboriosam nesciunt
+                                voluptatem
+                                placeat quos itaque!.
+                            </p>
+                            <img src="https://www.pngkit.com/png/full/12-128651_vintage-floral-style-design-6-clipart-free-download.png"
+                                alt="" class="img-fluid d-block mx-auto" style="max-width: 20vw;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="row px-2 mb-5">
+            <h2 class="text-light mb-2 pb-0 pt-4">My <b>Skills</b></h2>
+            <h4 class="text-secondary pb-5">I use several programming languages to make programs</h4>
+            <div class="row">
+                <div class="col-md mb-4">
+                    <div class="card d-block mx-auto" style="background-color: #333F44; border-radius: 2px;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/985px-Laravel.svg.png"
+                            class="card-img-top d-block mx-auto py-4 pb-2" alt="..." style="max-width: 8.2vw;">
+                        <div class="card-body">
+                            <h2 class="card-title text-light fw-semibold text-center mb-4">Laravel</h2>
+                            <p class="card-text text-light px-2" style="text-align: justify;">Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Doloribus
+                                necessitatibus esse voluptatum autem ipsum minus, voluptas laboriosam. Quo ab qui quae
+                                repudiandae, impedit aliquid, earum, hic sapiente aut quis ipsam!</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md mb-4">
+                    <div class="card d-block mx-auto" style="background-color: #333F44; border-radius: 2px;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Vue.png"
+                            class="card-img-top d-block mx-auto py-4 pb-2" alt="..." style="max-width: 8.5vw;">
+                        <div class="card-body">
+                            <h2 class="card-title text-light fw-semibold text-center mb-4">Vue JS</h2>
+                            <p class="card-text text-light px-2" style="text-align: justify;">Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Doloribus
+                                necessitatibus esse voluptatum autem ipsum minus, voluptas laboriosam. Quo ab qui quae
+                                repudiandae, impedit aliquid, earum, hic sapiente aut quis ipsam!</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md mb-4">
+                    <div class="card d-block mx-auto" style="background-color: #333F44; border-radius: 2px;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/JQuery_logo_text.svg/420px-JQuery_logo_text.svg.png"
+                            class="card-img-top d-block mx-auto py-4 pb-2 m-5" alt="..." style="max-width: 8vw;">
+                        <div class="card-body">
+                            <h2 class="card-title text-light fw-semibold text-center mb-4">Jquery</h2>
+                            <p class="card-text text-light px-2" style="text-align: justify;">Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Doloribus
+                                necessitatibus esse voluptatum autem ipsum minus, voluptas laboriosam. Quo ab qui quae
+                                repudiandae, impedit aliquid, earum, hic sapiente aut quis ipsam!</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md mb-4">
+                    <div class="card d-block mx-auto" style="background-color: #333F44; border-radius: 2px;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png"
+                            class="card-img-top d-block mx-auto py-4 pb-2" alt="..." style="max-width: 10.7vw;">
+                        <div class="card-body">
+                            <h2 class="card-title text-light fw-semibold text-center mb-4">Bootstrap</h2>
+                            <p class="card-text text-light px-2" style="text-align: justify;">Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Doloribus
+                                necessitatibus esse voluptatum autem ipsum minus, voluptas laboriosam. Quo ab qui quae
+                                repudiandae, impedit aliquid, earum, hic sapiente aut quis ipsam!</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3 mb-3">
+                    <div class="row">
+                        <div class="col m-2" style="background-color: #333F44; border-radius: 2px;">
+                            <img src="asset/image/Group 2.png" alt="" class="img-fluid mb-2 p-4">
+                            <h3 class="text-light fw-semibold text-center mb-4">Bootstrap</h3>
+                        </div>
+                        <div class="col m-2" style="background-color: #333F44; border-radius: 2px;">
+                            <img src="asset/image/Group 3.png" alt="" class="img-fluid mb-2 p-4">
+                            <h3 class="text-light fw-semibold text-center mb-4">Vue JS</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="row">
+                        <div class="col m-2" style="background-color: #333F44; border-radius: 2px;">
+                            <img src="asset/image/Group 4.png" alt="" class="img-fluid mb-2 p-4">
+                            <h3 class="text-light fw-semibold text-center mb-4">JQuery</h3>
+                        </div>
+                        <div class="col m-2" style="background-color: #333F44; border-radius: 2px;">
+                            <img src="asset/image/Group 5.png" alt="" class="img-fluid mb-2 p-4">
+                            <h3 class="text-light fw-semibold text-center mb-4">Laravel</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="row">
+                        <div class="col m-2" style="background-color: #333F44; border-radius: 2px;">
+                            <img src="asset/image/Group 6.png" alt="" class="img-fluid mb-2 p-4">
+                            <h3 class="text-light fw-semibold text-center mb-4">Javascript</h3>
+                        </div>
+                        <div class="col m-2" style="background-color: #333F44; border-radius: 2px;">
+                            <img src="asset/image/Group 7.png" alt="" class="img-fluid mb-2 p-4">
+                            <h3 class="text-light fw-semibold text-center mb-4">PHP</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="row">
+                        <div class="col m-2" style="background-color: #333F44; border-radius: 2px;">
+                            <img src="asset/image/Group 8.png" alt="" class="img-fluid mb-2 p-4">
+                            <h3 class="text-light fw-semibold text-center mb-4">Tailwind</h3>
+                        </div>
+                        <div class="col m-2" style="background-color: #333F44; border-radius: 2px;">
+                            <img src="asset/image/Group 9.png" alt="" class="img-fluid mb-2 p-4">
+                            <h3 class="text-light fw-semibold text-center mb-4">Flutter</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="row px-2 mb-5">
+            <h2 class="text-light text-center fw-bold pb-5 pt-4">Top 5 Project i've worked on.</h2>
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="asset/image/Foodegy.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="asset/image/Decoding.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="asset/image/TicketQue.jpg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Section 5 -->
+        <div class="row px-2">
+            <h2 class="text-light fw-semibold pb-5 pt-4">About me.</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <img src="https://i.pinimg.com/originals/0d/f4/69/0df469e1342925839f81b59c3e06dcae.jpg" alt=""
+                        class="img-fluid">
+                </div>
+                <div class="col-md-8">
+                    <p class="text-light fw-semibold ps-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                        Accusantium,
+                        vero repellendus. Ab at harum autem cumque provident illum, maxime eum velit quo odit recusandae
+                        repellendus optio magnam ipsa laboriosam voluptates, in libero tenetur possimus neque doloribus
+                        consectetur! Autem veritatis illum ex numquam doloremque magnam reprehenderit adipisci placeat
+                        optio!
+                        Hic quasi, delectus placeat veritatis fugit nesciunt ea quo voluptate dolor voluptatem sit
+                        quaerat
+                        magni
+                        numquam ducimus. Modi, autem nisi saepe nobis possimus odio accusamus provident omnis libero
+                        pariatur
+                        illo distinctio numquam unde. Ipsum ullam ratione aut iste incidunt. Consequatur provident, quos
+                        laborum
+                        molestiae minus cum error nemo est nulla dolore asperiores facere iure saepe ex sunt natus
+                        dolorem?
+                        Eius
+                        odio sequi itaque ipsam corrupti nobis doloremque ratione similique consectetur? Odit qui
+                        voluptatibus
+                        explicabo non deserunt earum rerum tenetur nam, sint omnis commodi est blanditiis repellendus
+                        laudantium
+                        minima suscipit quaerat doloribus natus, assumenda adipisci expedita quisquam fugiat? Atque
+                        sapiente
+                        nemo quo deserunt corporis. Veritatis, atque voluptate, dignissimos vitae reiciendis repudiandae
+                        hic
+                        nesciunt ad fugit inventore sapiente autem similique corporis natus perferendis? Omnis obcaecati
+                        ut
+                        a
+                        atque tempora inventore ducimus ipsum error culpa, ullam aut dolorum adipisci nisi iusto modi
+                        eaque
+                        facilis similique odit commodi vero quas eligendi corrupti aspernatur quam. Incidunt cumque
+                        totam
+                        expedita! Error, cumque dolore eligendi, ipsum quas illum laudantium exercitationem in velit
+                        debitis,
+                        quae odit quisquam nisi. Autem quidem iste et assumenda dolorem iure ducimus nihil delectus
+                        accusantium
+                        officiis fugit neque doloribus, velit, quasi modi ipsa veniam consectetur, aut minima harum
+                        molestias
+                        nisi quis mollitia culpa? Sequi necessitatibus illo incidunt amet fugit ab. Dolore ut, soluta
+                        veniam
+                        necessitatibus doloremque aperiam vitae repellendus amet labore illum excepturi sapiente eos
+                        deleniti
+                        exercitationem dicta, totam enim expedita repellat provident fuga ratione. Excepturi error, </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="asset/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
