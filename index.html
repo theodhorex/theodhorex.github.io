@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="asset/bootstrap/bootstrap.min.css">
+    <link rel="icon" href="asset/image/big_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         body {
             background-color: black;
@@ -111,7 +113,6 @@
             outline: none;
         }
 
-        /* Media queries untuk membuat tombol responsif */
         @media screen and (max-width: 600px) {
             :root {
                 --button-font-size: 14px;
@@ -126,7 +127,6 @@
             }
         }
 
-        /* Buat class "logo" responsif */
         .logo {
             width: 80vmin;
             height: 80vmin;
@@ -135,14 +135,12 @@
             margin: auto;
         }
 
-        /* Buat class "custom-button" dan "outline-button" responsif */
         .custom-button,
         .outline-button {
             font-size: 13px;
             padding: 10px 20px;
         }
 
-        /* Media queries untuk membuat tombol dan logo responsif */
         @media screen and (max-width: 600px) {
 
             .custom-button,
@@ -171,13 +169,11 @@
             }
         }
 
-        /* Gambar responsif */
         img {
             max-width: 100%;
             height: auto;
         }
 
-        /* Font ukuran responsif */
         h1 {
             font-size: 36px;
         }
@@ -205,40 +201,67 @@
         .centerss .centerz {
             margin: 0;
         }
+
+        .float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #90F3C9;
+            color: #000;
+            border-radius: 50px;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        .my-float {
+            margin-top: 13px;
+            font-size: 30px;
+            font-weight: bolder;
+        }
     </style>
     <title>Aurelio Theodhore Riyanto | Junior Web Dev</title>
 </head>
 
 <body>
+    <a href="#" class="float d-none">
+        <i class="fa fa-angle-up my-float" aria-hidden="true"></i>
+    </a>
+
     <div class="container">
-        <nav class="navbar navbar-expand-lg py-4 mb-5" data-bs-theme="dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="https://www.pngkit.com/png/full/12-128651_vintage-floral-style-design-6-clipart-free-download.png"
-                        alt="" class="img-fluid p-0 m-0" style="max-width: 4rem;">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav px-4">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled">Disabled</a>
-                        </li>
-                    </ul>
+        <header>
+            <nav class="navbar navbar-expand-lg py-4" data-bs-theme="dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="asset/image/big_logo.png" alt="" class="img-fluid p-0 m-0" style="max-width: 4rem;">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav px-4">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="whatImDoing" style="cursor: pointer">What i'm doing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="skills" style="cursor: pointer">Skills</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="project" style="cursor: pointer">Project</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="aboutMe" style="cursor: pointer">About me</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </header>
 
 
         <div class="container mx-0 px-0 centerss">
@@ -246,16 +269,13 @@
             <div class="row centerz">
                 <div class="col-md-6 px-3 mb-5">
                     <h5 class="text-secondary text-uppercase fw-semibold">Hey there!</h5>
-                    <h1 class="text-light fw-semibold">I'm Theodhore work as Junior Web Dev</h1>
+                    <h1 class="text-light fw-semibold">I'm Aurelio Theodhore Riyanto</h1>
+                    <h6 class="text-secondary">JUNIOR WEB DEV & WEB DESIGN ENTHUSIAST.</h6>
                     <div class="row centerz ps-5 mt-5">
                         <div class="col-10 border border-3 border-top-0 border-end-0 border-bottom-0 ps-4">
                             <span class="text-secondary">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ipsum illo quis possimus
-                                quibusdam
-                                veritatis cumque eaque iure laudantium quam consequatur modi nihil libero error minus
-                                optio,
-                                et quo
-                                at quae accusantium rem incidunt.
+                                As someone from a simple family, I have developed a keen interest in technology,
+                                particularly in the realms of Web Technology, Graphic Design and UI/UX design.
                             </span>
                             <div class="col mt-4 d-flex justify-content-start">
                                 <a id="seeMoreButton" class="custom-button me-3 text-uppercase">See More</a>
@@ -264,36 +284,30 @@
                             </div>
                         </div>
                     </div>
+                    <!-- <img style="max-width: 40%;" src="https://i.pinimg.com/originals/e5/93/ab/e593ab0589d5f1b389e4dfbcce2bce20.gif" alt="" class="img-fluid"> -->
                 </div>
                 <div class="col-md-6">
-                    <img src="https://www.pngkit.com/png/full/12-128651_vintage-floral-style-design-6-clipart-free-download.png"
-                        alt="" class="img-fluid">
+                    <img src="asset/image/big_logo.png" alt="" class="img-fluid">
                 </div>
             </div>
 
 
             <!-- Section 2 -->
             <div class="row centerz mb-5" id="scrollingTarget">
-                <h2 class="text-light fw-semibold mb-5 pt-4">What im doing.</h2>
+                <h2 class="text-light pt-4">What i'm <b>doing</b>.</h2>
+                <h5 class="text-secondary fw-semibold mb-4">Here is what i'm doing.</h5>
                 <div class="row centerz">
                     <div class="col-md-4 mb-4">
                         <div class="card d-block mx-auto" style="background-color: #333F44; border-radius: 2px;">
                             <h3 class="text-center text-light fw-semibold p-3 pt-4">Developing</h3>
                             <div class="card-body">
-                                <p class="card-text text-light px-3" style="text-align: justify;">Lorem ipsum dolor sit
-                                    amet
-                                    consectetur adipisicing elit. Repudiandae molestiae
-                                    cumque dolorum, ducimus itaque debitis perspiciatis nam earum nulla laborum
-                                    doloremque
-                                    beatae
-                                    eligendi accusamus voluptates vitae provident optio iste a. Molestiae ducimus
-                                    necessitatibus
-                                    omnis, ex inventore magni consequatur amet laboriosam nesciunt voluptatem placeat
-                                    quos
-                                    itaque!.
+                                <p class="card-text text-light px-3" style="text-align: justify;">
+                                    My focus is on creating an exciting and innovative new website. I enjoy pursuing my
+                                    passion for coding and designing each element of the website to provide an optimal
+                                    user experience.
                                 </p>
-                                <img src="https://www.pngkit.com/png/full/12-128651_vintage-floral-style-design-6-clipart-free-download.png"
-                                    alt="" class="img-fluid d-block mx-auto" style="max-width: 20vw;">
+                                <img src="asset/image/big_logo.png" alt="" class="img-fluid d-block mx-auto"
+                                    style="max-width: 20vw;">
                             </div>
                         </div>
                     </div>
@@ -301,18 +315,15 @@
                         <div class="card d-block mx-auto" style="background-color: #333F44; border-radius: 2px;">
                             <h3 class="text-center text-light fw-semibold p-3 pt-4">Make Design</h3>
                             <div class="card-body">
-                                <p class="card-text text-light px-3" style="text-align: justify;">Lorem ipsum dolor sit
-                                    amet
-                                    consectetur adipisicing elit. Repudiandae molestiae
-                                    cumque dolorum, ducimus itaque debitis perspiciatis nam earum nulla laborum
-                                    doloremque
-                                    beatae
-                                    eligendi accusamus voluptates vitae provident optio iste a.uatur amet laboriosam
-                                    nesciunt
-                                    voluptatem placeat quos itaque!.
+                                <p class="card-text text-light px-3" style="text-align: justify;">In addition to
+                                    developing websites, I also have a strong passion for creating captivating designs.
+                                    I believe that a well-thought-out and visually appealing design is essential to
+                                    leave a lasting impression on users. My goal is to strike a perfect balance
+                                    between aesthetics and functionality, ensuring that the user experience is seamless
+                                    and enjoyable.
                                 </p>
-                                <img src="https://www.pngkit.com/png/full/12-128651_vintage-floral-style-design-6-clipart-free-download.png"
-                                    alt="" class="img-fluid d-block mx-auto" style="max-width: 20vw;">
+                                <img src="asset/image/big_logo.png" alt="" class="img-fluid d-block mx-auto"
+                                    style="max-width: 20vw;">
                             </div>
                         </div>
                     </div>
@@ -320,15 +331,15 @@
                         <div class="card d-block mx-auto" style="background-color: #333F44; border-radius: 2px;">
                             <h3 class="text-center text-light fw-semibold p-3 pt-4">Deploying</h3>
                             <div class="card-body">
-                                <p class="card-text text-light px-3" style="text-align: justify;">Lorem ipsum dolor sit
-                                    amet
-                                    consectetur adipisicing elit. Repudiandae molestiae
-                                    cumque dolorum, ducimus itaque debitis perspiciatis nam earum laboriosam nesciunt
-                                    voluptatem
-                                    placeat quos itaque!.
+                                <p class="card-text text-light px-3" style="text-align: justify;">In addition to website
+                                    development and design, I take great pride in the deployment process. Deploying a
+                                    website is a critical step in making it accessible to the world. I have experience
+                                    in deploying websites on various platforms and servers, ensuring a smooth and
+                                    efficient launch. I pay close attention to server configurations, security measures,
+                                    and performance optimization to deliver a reliable and fast-loading website.
                                 </p>
-                                <img src="https://www.pngkit.com/png/full/12-128651_vintage-floral-style-design-6-clipart-free-download.png"
-                                    alt="" class="img-fluid d-block mx-auto" style="max-width: 20vw;">
+                                <img src="asset/image/big_logo.png" alt="" class="img-fluid d-block mx-auto"
+                                    style="max-width: 20vw;">
                             </div>
                         </div>
                     </div>
@@ -336,22 +347,19 @@
             </div>
 
             <!-- Section 3 -->
-            <div class="row centerz mb-5">
+            <div class="row centerz mb-5" id="skillTarget">
                 <h2 class="text-light mb-2 pb-0 pt-4">My <b>Skills</b></h2>
-                <h4 class="text-secondary pb-5">I use several programming languages to make programs</h4>
+                <h5 class="text-secondary fw-semibold pb-3">I use several programming languages to make programs</h5>
                 <div class="row centerz">
                     <div class="col-md mb-4">
                         <div class="card d-block mx-auto" style="background-color: #333F44; border-radius: 2px;">
                             <img src="asset/image/Group 5.png" class="card-img-top d-block mx-auto py-4 pb-2">
                             <div class="card-body">
-                                <h2 class="card-title text-light fw-semibold text-center mb-4">Laravel</h2>
-                                <p class="card-text text-light px-2" style="text-align: justify;">Lorem ipsum dolor sit
-                                    amet
-                                    consectetur adipisicing elit. Doloribus
-                                    necessitatibus esse voluptatum autem ipsum minus, voluptas laboriosam. Quo ab qui
-                                    quae
-                                    repudiandae, impedit aliquid, earum, hic sapiente aut quis ipsam!</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <h2 class="card-title text-light fw-semibold text-center mb-3">Laravel</h2>
+                                <p class="card-text text-light px-2 fw-semibold">I use
+                                    Laravel as my
+                                    main framework because of the development process which I find very comfortable!</p>
+                                <a href="https://laravel.com" class="btn btn-secondary fw-semibold">Go somewhere</a>
                             </div>
                         </div>
                     </div>
@@ -359,14 +367,10 @@
                         <div class="card d-block mx-auto" style="background-color: #333F44; border-radius: 2px;">
                             <img src="asset/image/Group 3.png" class="card-img-top d-block mx-auto py-4 pb-2">
                             <div class="card-body">
-                                <h2 class="card-title text-light fw-semibold text-center mb-4">Vue JS</h2>
-                                <p class="card-text text-light px-2" style="text-align: justify;">Lorem ipsum dolor sit
-                                    amet
-                                    consectetur adipisicing elit. Doloribus
-                                    necessitatibus esse voluptatum autem ipsum minus, voluptas laboriosam. Quo ab qui
-                                    quae
-                                    repudiandae, impedit aliquid, earum, hic sapiente aut quis ipsam!</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <h2 class="card-title text-light fw-semibold text-center mb-3">Vue JS</h2>
+                                <p class="card-text text-light px-2 fw-semibold">I use Vue JS as my
+                                    second framework for the development process which I find very comfortable too!</p>
+                                <a href="https://vuejs.org" class="btn btn-secondary fw-semibold">Go somewhere</a>
                             </div>
                         </div>
                     </div>
@@ -374,14 +378,11 @@
                         <div class="card d-block mx-auto" style="background-color: #333F44; border-radius: 2px;">
                             <img src="asset/image/Group 4.png" class="card-img-top d-block mx-auto py-4 pb-2">
                             <div class="card-body">
-                                <h2 class="card-title text-light fw-semibold text-center mb-4">Jquery</h2>
-                                <p class="card-text text-light px-2" style="text-align: justify;">Lorem ipsum dolor sit
-                                    amet
-                                    consectetur adipisicing elit. Doloribus
-                                    necessitatibus esse voluptatum autem ipsum minus, voluptas laboriosam. Quo ab qui
-                                    quae
-                                    repudiandae, impedit aliquid, earum, hic sapiente aut quis ipsam!</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <h2 class="card-title text-light fw-semibold text-center mb-3">Jquery</h2>
+                                <p class="card-text text-light px-2 fw-semibold">I use this as a
+                                    supporting library in the development process which in my opinion is also very
+                                    comfortable too!</p>
+                                <a href="https://jquery.com" class="btn btn-secondary fw-semibold">Go somewhere</a>
                             </div>
                         </div>
                     </div>
@@ -389,14 +390,10 @@
                         <div class="card d-block mx-auto" style="background-color: #333F44; border-radius: 2px;">
                             <img src="asset/image/Group 2.png" class="card-img-top d-block mx-auto py-4 pb-2">
                             <div class="card-body">
-                                <h2 class="card-title text-light fw-semibold text-center mb-4">Bootstrap</h2>
-                                <p class="card-text text-light px-2" style="text-align: justify;">Lorem ipsum dolor sit
-                                    amet
-                                    consectetur adipisicing elit. Doloribus
-                                    necessitatibus esse voluptatum autem ipsum minus, voluptas laboriosam. Quo ab qui
-                                    quae
-                                    repudiandae, impedit aliquid, earum, hic sapiente aut quis ipsam!</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <h2 class="card-title text-light fw-semibold text-center mb-3">Bootstrap</h2>
+                                <p class="card-text text-light px-2 fw-semibold">I use Bootstrap as a
+                                    supporting library in the development process for the frontend and display.</p>
+                                <a href="https://getbootstrap.com" class="btn btn-secondary fw-semibold">Go somewhere</a>
                             </div>
                         </div>
                     </div>
@@ -457,8 +454,9 @@
             </div>
 
             <!-- Section 4 -->
-            <div class="row centerz mb-5">
-                <h2 class="text-light text-center fw-bold pb-5 pt-4">Top 5 Project i've worked on.</h2>
+            <div class="row centerz mb-5" id="projectTarget">
+                <h2 class="text-light text-center fw-semibold pt-4">Top 3 Project i've worked on.</h2>
+                <h5 class="text-secondary text-center fw-semibold pb-4">Here is my work.</h5>
                 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -485,65 +483,31 @@
             </div>
 
             <!-- Section 5 -->
-            <div class="row centerz mb-5">
-                <h2 class="text-light fw-semibold pb-5 pt-4">About me.</h2>
+            <div class="row centerz mb-5" id="aboutMeTarget">
+                <h2 class="text-light fw-semibold pt-4">About me.</h2>
+                <h5 class="text-secondary fw-semibold pb-5">Here is a little about me.</h5>
                 <div class="row centerz">
                     <div class="col-md-4 mb-4">
                         <img src="https://i.pinimg.com/originals/0d/f4/69/0df469e1342925839f81b59c3e06dcae.jpg" alt=""
                             class="img-fluid">
                     </div>
                     <div class="col-md-8">
-                        <p class="text-light fw-semibold ps-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                            Accusantium,
-                            vero repellendus. Ab at harum autem cumque provident illum, maxime eum velit quo odit
-                            recusandae
-                            repellendus optio magnam ipsa laboriosam voluptates, in libero tenetur possimus neque
-                            doloribus
-                            consectetur! Autem veritatis illum ex numquam doloremque magnam reprehenderit adipisci
-                            placeat
-                            optio!
-                            Hic quasi, delectus placeat veritatis fugit nesciunt ea quo voluptate dolor voluptatem sit
-                            quaerat
-                            magni
-                            numquam ducimus. Modi, autem nisi saepe nobis possimus odio accusamus provident omnis libero
-                            pariatur
-                            illo distinctio numquam unde. Ipsum ullam ratione aut iste incidunt. Consequatur provident,
-                            quos
-                            laborum
-                            molestiae minus cum error nemo est nulla dolore asperiores facere iure saepe ex sunt natus
-                            dolorem?
-                            Eius
-                            odio sequi itaque ipsam corrupti nobis doloremque ratione similique consectetur? Odit qui
-                            voluptatibus
-                            explicabo non deserunt earum rerum tenetur nam, sint omnis commodi est blanditiis
-                            repellendus
-                            laudantium
-                            minima suscipit quaerat doloribus natus, assumenda adipisci expedita quisquam fugiat? Atque
-                            sapiente
-                            nemo quo deserunt corporis. Veritatis, atque voluptate, dignissimos vitae reiciendis
-                            repudiandae
-                            hic
-                            nesciunt ad fugit inventore sapiente autem similique corporis natus perferendis? Omnis
-                            obcaecati
-                            ut
-                            a
-                            atque tempora inventore ducimus ipsum error culpa, ullam aut dolorum adipisci nisi iusto
-                            modi
-                            eaque
-                            facilis similique odit commodi vero quas eligendi corrupti aspernatur quam. Incidunt cumque
-                            totam
-                            expedita! Error, cumque dolore eligendi, ipsum quas illum laudantium exercitationem in velit
-                            debitis,
-                            quae odit quisquam nisi. Autem quidem iste et assumenda dolorem iure ducimus nihil delectus
-                            accusantium
-                            officiis fugit neque doloribus, velit, quasi modi ipsa veniam consectetur, aut minima harum
-                            molestias
-                            nisi quis mollitia culpa? Sequi necessitatibus illo incidunt amet fugit ab. Dolore ut,
-                            soluta
-                            veniam
-                            necessitatibus doloremque aperiam vitae repellendus amet labore illum excepturi sapiente eos
-                            deleniti
-                            exercitationem dicta, totam enim expedita repellat provident fuga ratione. Excepturi error,
+                        <p class="text-light fw-semibold ps-4">Hello! My name is Theodhore u can call me Theo. I'm a web
+                            design and web
+                            development enthusiast since my middle school days. Now, I've turned this passion into my
+                            primary focus of study in high school. Creating appealing and functional websites brings me
+                            immense joy. This personal website serves as a platform for my creativity, and I hope to
+                            share inspiration with all of you. Thank you for visiting, and I hope you enjoy the content
+                            here.
+                        </p>
+                        <p class="text-light fw-semibold ps-4">
+                            Beyond web design and web development, I find great satisfaction in the process of deploying
+                            websites and making them accessible to a broader audience. My journey in the world of
+                            technology has been an exciting and continuous learning experience, and I'm eager to embrace
+                            every opportunity to expand my knowledge and skills in these two fields that deeply
+                            captivate me. With each project, I strive to create meaningful and user-centric digital
+                            experiences. Thank you for taking the time to explore my personal website. Let's connect and
+                            collaborate to bring more innovative ideas to life!
                         </p>
                     </div>
                 </div>
@@ -552,22 +516,26 @@
             <!-- Footer -->
             <div class="row centerz">
                 <div class="col">
-                    <div class="row centerz mb-3">
-                        <div class="col-4">
-                            <a class="text-center d-block mx-auto" href="https://www.instagram.com/theodhoreee"><img
-                                    src="asset/image/INSTA.png" alt="" class="img-fluid" style="max-width: 2rem;"></a>
-                        </div>
-                        <div class="col-4">
-                            <a class="text-center d-block mx-auto"
-                                href="mailto:theodhore76@gmail.com?subject=Hey%20Theodhore%20can%20help?%20"><img
-                                    src="asset/image/MAIL.png" alt="" class="img-fluid" style="max-width: 2rem;"></a>
-                        </div>
-                        <div class="col-4">
-                            <a class="text-center d-block mx-auto" href="#"><img src="asset/image/LINKEDIN.png" alt=""
-                                    class="img-fluid" style="max-width: 2rem;"></a>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <div class="row centerz w-50">
+                            <div class="col-4">
+                                <a class="text-center d-block mx-auto" href="https://www.instagram.com/theodhoreee"><img
+                                        src="asset/image/INSTA.png" alt="" class="img-fluid"
+                                        style="max-width: 2rem;"></a>
+                            </div>
+                            <div class="col-4">
+                                <a class="text-center d-block mx-auto"
+                                    href="mailto:theodhore76@gmail.com?subject=Hey%20Theodhore%20can%20help?%20"><img
+                                        src="asset/image/MAIL.png" alt="" class="img-fluid"
+                                        style="max-width: 2rem;"></a>
+                            </div>
+                            <div class="col-4">
+                                <a class="text-center d-block mx-auto" href="#"><img src="asset/image/LINKEDIN.png"
+                                        alt="" class="img-fluid" style="max-width: 2rem;"></a>
+                            </div>
                         </div>
                     </div>
-                    <h5 class="fw-semibold my-4 text-center">Made with ❤️ By Theodhore</h5>
+                    <h5 class="fw-semibold my-4 text-center">Made with ❤️ By Theodhore ©2023</h5>
                 </div>
             </div>
         </div>
@@ -576,10 +544,30 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
-
-            $("#seeMoreButton").click(function () {
+            $("#seeMoreButton, #whatImDoing").click(function () {
                 document.getElementById("scrollingTarget").scrollIntoView({ behavior: "smooth" })
             })
+            $("#skills").click(function () {
+                document.getElementById("skillTarget").scrollIntoView({ behavior: "smooth" })
+            })
+            $("#project").click(function () {
+                document.getElementById("projectTarget").scrollIntoView({ behavior: "smooth" })
+            })
+            $("#aboutMe").click(function () {
+                document.getElementById("aboutMeTarget").scrollIntoView({ behavior: "smooth" })
+            })
+
+        });
+
+        window.addEventListener('scroll', function () {
+            var navbar = document.querySelector('.float');
+            if (window.scrollY > 0) {
+                navbar.classList.add('d-block');
+                navbar.classList.remove('d-none');
+            } else {
+                navbar.classList.remove('d-block');
+                navbar.classList.add('d-none');
+            }
         });
     </script>
 </body>
