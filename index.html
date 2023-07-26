@@ -7,220 +7,7 @@
     <link rel="stylesheet" href="asset/bootstrap/bootstrap.min.css">
     <link rel="icon" href="asset/image/big_logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        body {
-            background-color: black;
-        }
-
-        .logo {
-            position: relative;
-            min-width: 80vmin;
-            min-height: 80vmin;
-            display: block;
-            margin: auto;
-        }
-
-        .logo::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            display: inline-block;
-            --col1: #a5bc1f;
-            --col2: #99ae21;
-            --col3: #707d28;
-            --col4: #4a4f2d;
-            --c1: var(--col1);
-            --c2: var(--col2);
-            --c3: var(--col3);
-            --c4: var(--col4);
-            background-image: radial-gradient(var(--c1) 0 10%, var(--c2) 10% 20%, var(--c3) 20% 30%, var(--c4) 30% 40%, transparent 40% 100%);
-        }
-
-        .logo::before {
-            animation: ripple 4s linear;
-        }
-
-        @keyframes ripple {
-            0% {
-                --c2: transparent;
-                --c3: transparent;
-                --c4: transparent;
-                --c1: var(--col1);
-            }
-
-            33.33% {
-                --c2: var(--col2);
-            }
-
-            66.66% {
-                --c3: var(--col3);
-            }
-
-            100% {
-                --c4: var(--col4);
-            }
-        }
-
-        :root {
-            --button-font-size: 16px;
-            --button-padding: 10px 20px;
-        }
-
-        .custom-button {
-            padding: var(--button-padding);
-            font-size: var(--button-font-size);
-            font-weight: bold;
-            color: black;
-            text-decoration: none;
-            background-color: #94F3E4;
-            border: none;
-            border-radius: 2px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .custom-button:hover {
-            background-color: #90F3C9;
-        }
-
-        .custom-button:focus {
-            outline: none;
-        }
-
-        .outline-button {
-            padding: var(--button-padding);
-            font-size: var(--button-font-size);
-            font-weight: bold;
-            color: white;
-            text-decoration: none;
-            border: 2px solid white;
-            border-radius: 2px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .outline-button:hover {
-            background-color: white;
-            color: black;
-            border: 2px solid transparent;
-        }
-
-        .outline-button:focus {
-            outline: none;
-        }
-
-        @media screen and (max-width: 600px) {
-            :root {
-                --button-font-size: 14px;
-                --button-padding: 8px 16px;
-            }
-        }
-
-        @media screen and (max-width: 400px) {
-            :root {
-                --button-font-size: 12px;
-                --button-padding: 6px 12px;
-            }
-        }
-
-        .logo {
-            width: 80vmin;
-            height: 80vmin;
-            max-width: 400px;
-            max-height: 400px;
-            margin: auto;
-        }
-
-        .custom-button,
-        .outline-button {
-            font-size: 13px;
-            padding: 10px 20px;
-        }
-
-        @media screen and (max-width: 600px) {
-
-            .custom-button,
-            .outline-button {
-                font-size: 12px;
-                padding: 8px 16px;
-            }
-
-            .logo {
-                width: 60vmin;
-                height: 60vmin;
-            }
-        }
-
-        @media screen and (max-width: 400px) {
-
-            .custom-button,
-            .outline-button {
-                font-size: 12px;
-                padding: 6px 12px;
-            }
-
-            .logo {
-                width: 50vmin;
-                height: 50vmin;
-            }
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        h1 {
-            font-size: 36px;
-        }
-
-        h2 {
-            font-size: 28px;
-        }
-
-        h3 {
-            font-size: 22px;
-        }
-
-        h5 {
-            font-size: 18px;
-        }
-
-        .centerss {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        .centerss .centerz {
-            margin: 0;
-        }
-
-        .float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 40px;
-            right: 40px;
-            background-color: #90F3C9;
-            color: #000;
-            border-radius: 50px;
-            text-align: center;
-            z-index: 1000;
-        }
-
-        .my-float {
-            margin-top: 13px;
-            font-size: 30px;
-            font-weight: bolder;
-        }
-    </style>
+    <link rel="stylesheet" href="asset/css/style.css">
     <title>Aurelio Theodhore Riyanto | Junior Web Dev</title>
 </head>
 
@@ -270,7 +57,7 @@
                 <div class="col-md-6 px-3 mb-5">
                     <h5 class="text-secondary text-uppercase fw-semibold">Hey there!</h5>
                     <h1 class="text-light fw-semibold">I'm Aurelio Theodhore Riyanto</h1>
-                    <h6 class="text-secondary">JUNIOR WEB DEV & WEB DESIGN ENTHUSIAST.</h6>
+                    <h6 class="text-secondary">JUNIOR WEB DEVELOPER & WEB DESIGN ENTHUSIAST.</h6>
                     <div class="row centerz ps-5 mt-5">
                         <div class="col-10 border border-3 border-top-0 border-end-0 border-bottom-0 ps-4">
                             <span class="text-secondary">
@@ -393,7 +180,8 @@
                                 <h2 class="card-title text-light fw-semibold text-center mb-3">Bootstrap</h2>
                                 <p class="card-text text-light px-2 fw-semibold">I use Bootstrap as a
                                     supporting library in the development process for the frontend and display.</p>
-                                <a href="https://getbootstrap.com" class="btn btn-secondary fw-semibold">Go somewhere</a>
+                                <a href="https://getbootstrap.com" class="btn btn-secondary fw-semibold">Go
+                                    somewhere</a>
                             </div>
                         </div>
                     </div>
@@ -455,7 +243,7 @@
 
             <!-- Section 4 -->
             <div class="row centerz mb-5" id="projectTarget">
-                <h2 class="text-light text-center fw-semibold pt-4">Top 3 Project i've worked on.</h2>
+                <h2 class="text-light text-center pt-4">Top <b>3 Project</b> i've worked on.</h2>
                 <h5 class="text-secondary text-center fw-semibold pb-4">Here is my work.</h5>
                 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
@@ -484,7 +272,7 @@
 
             <!-- Section 5 -->
             <div class="row centerz mb-5" id="aboutMeTarget">
-                <h2 class="text-light fw-semibold pt-4">About me.</h2>
+                <h2 class="text-light pt-4">About <b>me</b>.</h2>
                 <h5 class="text-secondary fw-semibold pb-5">Here is a little about me.</h5>
                 <div class="row centerz">
                     <div class="col-md-4 mb-4">
@@ -492,22 +280,23 @@
                             class="img-fluid">
                     </div>
                     <div class="col-md-8">
-                        <p class="text-light fw-semibold ps-4">Hello! My name is Theodhore u can call me Theo. I'm a web
-                            design and web
-                            development enthusiast since my middle school days. Now, I've turned this passion into my
-                            primary focus of study in high school. Creating appealing and functional websites brings me
-                            immense joy. This personal website serves as a platform for my creativity, and I hope to
-                            share inspiration with all of you. Thank you for visiting, and I hope you enjoy the content
-                            here.
+                        <p class="text-light fw-semibold ps-4">Hello! My name is Theodhore, but you can call me Theo.
+                            I've been passionate about web design and web development since my middle school days, and
+                            now I've made them my primary focus of study in high school. Creating appealing and
+                            functional websites brings me immense joy, and I feel fortunate to see my skills grow with
+                            each project.
                         </p>
                         <p class="text-light fw-semibold ps-4">
-                            Beyond web design and web development, I find great satisfaction in the process of deploying
-                            websites and making them accessible to a broader audience. My journey in the world of
-                            technology has been an exciting and continuous learning experience, and I'm eager to embrace
-                            every opportunity to expand my knowledge and skills in these two fields that deeply
-                            captivate me. With each project, I strive to create meaningful and user-centric digital
-                            experiences. Thank you for taking the time to explore my personal website. Let's connect and
-                            collaborate to bring more innovative ideas to life!
+                            Beyond web design and web development, I find great satisfaction in deploying websites and
+                            making them accessible to a broader audience. My journey in the world of technology has been
+                            an exciting and continuous learning experience. As I honed my design and coding abilities, I
+                            discovered a deeper appreciation for user experience and the impact of well-crafted
+                            websites. This personal website serves as a platform for my creativity, and I hope to share
+                            inspiration with all of you. From experimenting with new design trends to delving into the
+                            latest web development frameworks, I'm always eager to explore the limitless possibilities
+                            that these fields offer. With each project, I strive to create meaningful and user-centric
+                            digital experiences, believing that a well-designed website has the power to leave a lasting
+                            impression on its visitors!
                         </p>
                     </div>
                 </div>
@@ -535,41 +324,14 @@
                             </div>
                         </div>
                     </div>
-                    <h5 class="fw-semibold my-4 text-center">Made with ❤️ By Theodhore ©2023</h5>
+                    <h5 class="text-secondary fw-semibold my-4 text-center">Made with ❤️ By Theodhore ©2023</h5>
                 </div>
             </div>
         </div>
     </div>
     <script src="asset/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $("#seeMoreButton, #whatImDoing").click(function () {
-                document.getElementById("scrollingTarget").scrollIntoView({ behavior: "smooth" })
-            })
-            $("#skills").click(function () {
-                document.getElementById("skillTarget").scrollIntoView({ behavior: "smooth" })
-            })
-            $("#project").click(function () {
-                document.getElementById("projectTarget").scrollIntoView({ behavior: "smooth" })
-            })
-            $("#aboutMe").click(function () {
-                document.getElementById("aboutMeTarget").scrollIntoView({ behavior: "smooth" })
-            })
-
-        });
-
-        window.addEventListener('scroll', function () {
-            var navbar = document.querySelector('.float');
-            if (window.scrollY > 0) {
-                navbar.classList.add('d-block');
-                navbar.classList.remove('d-none');
-            } else {
-                navbar.classList.remove('d-block');
-                navbar.classList.add('d-none');
-            }
-        });
-    </script>
+    <script src="asset/js/index.js"></script>
 </body>
 
 </html>
