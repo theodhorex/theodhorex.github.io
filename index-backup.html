@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="asset/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            text-decoration: none !important;
+            color: transparent !important;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            overflow-y: scroll;
+        }
+
+        .border-animation {
+            border: 1px solid white;
+        }
+
+        .floats {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        .section-one {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            /* Mencegah konten container melewati batas */
+        }
+
+        .section-one .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: url('https://media-cdn.t24.com.tr/media/library/2022/04/1650176049640-dugun.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            filter: brightness(60%);
+        }
+
+        .section-one .center-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        #big-text-hello {
+            font-family: 'Playfair Display', serif;
+            font-size: 0vh;
+            font-weight: 300;
+            margin: 0;
+            opacity: 0;
+            /* Hapus margin default dari h1 */
+        }
+
+        #small-text-hello {
+            font-size: 0vh;
+            opacity: 0;
+        }
+
+        #sub-small-text-hello {
+            font-size: 0vh;
+            opacity: 0;
+        }
+
+        li {
+            font-family: 'Playfair Display', serif;
+            font-weight: lighter;
+            font-size: large;
+        }
+
+        /* Section Two */
+        .couple-information {
+            background-color: black;
+            padding: 2%;
+        }
+
+        #big-text-couple-information {
+            font-family: 'Playball', serif;
+            font-weight: bold;
+        }
+
+        .section-two {
+            padding: 20px;
+            background-color: black;
+        }
+
+        .akad-date-time-place {
+            /* fw-medium border rounded-5 p-2 px-3 */
+            font-size: 0vh;
+            opacity: 0;
+            padding: 0;
+        }
+
+        .resepsi-date-time-place {
+            font-size: 0vh;
+            opacity: 0;
+            padding: 0;
+        }
+
+        .section-two .center-content {
+            text-align: center;
+        }
+
+        #big-text-section-two-akad {
+            font-family: 'Playfair Display', serif;
+            font-size: 0vh;
+            opacity: 0;
+            font-weight: 100;
+            margin: 0;
+        }
+
+        #big-text-section-two-resepsi {
+            font-family: 'Playfair Display', serif;
+            font-size: 0vh;
+            opacity: 0;
+            font-weight: 100;
+            margin: 0;
+        }
+
+        #big-text-place-section-two {
+            font-family: 'Playfair Display', serif;
+            font-size: 0;
+            opacity: 0;
+            font-weight: 100;
+            margin: 0;
+        }
+
+        .section-three {
+            background-color: black;
+            padding: 20px;
+        }
+
+        #small-text-section-three {
+            opacity: 0;
+            font-size: 0;
+            font-weight: 200;
+            margin: 0;
+        }
+
+        #big-text-section-three {
+            font-family: 'Playfair Display', serif;
+            font-size: 0;
+            opacity: 0;
+            font-weight: lighter;
+            margin: 0;
+        }
+
+        #slide-down-to-introducing-section {
+            /*  rounded-5 p-3 py-4 */
+            /* padding: 2.5vh 1.8vh; */
+            font-size: 0;
+            opacity: 0;
+            font-weight: 400;
+        }
+
+        .section-four {
+            background-color: black;
+            padding: 20px;
+        }
+
+        .couple-parent-information {
+            font-family: 'Playfair Display', serif;
+            font-size: 0;
+            opacity: 0;
+            font-weight: 200;
+            margin: 0;
+        }
+
+        .float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #272727;
+            color: #ffffff;
+            border-radius: 50px;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        /* Buat Floating Button */
+        .my-float {
+            margin-top: 13px;
+            font-size: 30px;
+            font-weight: bolder;
+        }
+    </style>
+    <title>Online Invitation</title>
+</head>
+
+<body>
+    <div class="section-one">
+        <div class="background"></div>
+        <div class="container my-2">
+            <div class="d-flex align-items-center justify-content-center">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link text-light active" aria-current="page" href="#">Event Detail</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-light" href="#">Gallery</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-light" href="#">Wish</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Isi konten Undangan di sini -->
+            <div class="center-content">
+                <div class="sub-section-one-center-content mb-3">
+                    <h5 id="small-text-hello" class="text-center text-light">Dear,</h5>
+                    <h1 id="big-text-hello" class="text-center text-light">Teman</h1>
+                </div>
+
+                <div class="sub-section-two-center-content">
+                    <h5 id="sub-small-text-hello" class="text-center text-light fw-light mb-4">
+                        Mengundang untuk hadir dipernikahan kami pada <br>
+                        Minggu, 21 Mei 2029
+                    </h5>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <a href="#" id="save-date-button"
+                            class="text-center text-light p-2 px-4 btn border rounded-5">Open Invitation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="other-section" id="other-section-target" style="display: none;">
+
+        <!-- Couple information -->
+        <div class="couple-information">
+            <h2 id="big-text-couple-information" class="text-light text-center">The Wedding of</h2>
+        </div>
+
+
+        <!-- Date & Time Marriage Contract -->
+        <div id="datetime-marriage-info" class="section-two">
+            <div class="container my-2">
+                <div class="center-content">
+                    <!-- Konten untuk section-two di sini -->
+
+                    <!-- Date & Time Marriage Contract -->
+                    <div class="sub-section-one-center-content mb-5">
+                        <h1 id="big-text-section-two-akad" class="text-center text-light mb-3">Akad</h1>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <div class="row w-75">
+                                <div class="col">
+                                    <h6 id="akad-date-time-placeOne"
+                                        class="akad-date-time-place text-light text-center rounded-5">
+                                        Minggu, 21 Mei
+                                        2029,</h6>
+                                </div>
+                                <div class="col">
+                                    <h6 id="akad-date-time-placeTwo"
+                                        class="akad-date-time-place text-light text-center rounded-5">
+                                        08.00 - Selesai,</h6>
+                                </div>
+                                <div class="col">
+                                    <h6 id="akad-date-time-placeThree"
+                                        class="akad-date-time-place text-light text-center rounded-5">
+                                        Nusa Penida Island,
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Date & Time Reception -->
+                    <div class="sub-section-one-center-content mb-5">
+                        <h1 id="big-text-section-two-resepsi" class="text-center text-light mb-3">Resepsi</h1>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <div id="resepsi-date-time-place" class="row w-75">
+                                <div class="col">
+                                    <h6 id="resepsi-date-time-placeOne"
+                                        class="resepsi-date-time-place text-light text-center rounded-5">
+                                        Minggu, 21 Mei
+                                        2029,</h6>
+                                </div>
+                                <div class="col">
+                                    <h6 id="resepsi-date-time-placeTwo"
+                                        class="resepsi-date-time-place text-light text-center rounded-5">
+                                        08.00 - Selesai,</h6>
+                                </div>
+                                <div class="col">
+                                    <h6 id="resepsi-date-time-placeThree"
+                                        class="resepsi-date-time-place text-light text-center rounded-5">
+                                        Nusa Penida Island,
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Place Map -->
+                    <h3 style="font-family: 'Playfair Display', serif; font-weight: 100;"
+                        id="big-text-place-section-two" class="text-light text-center">
+                        Place Map</h3>
+                    <div id="gmap-canvas-one" class="gmap_canvas d-block mx-auto"><iframe width="0" height="0"
+                            id="gmap_canvas"
+                            src="https://maps.google.com/maps?q=bali&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+                            href="https://2yu.co">2yu</a><br>
+                        <style>
+                            .mapouter {
+                                position: relative;
+                                text-align: right;
+                                height: 510px;
+                                width: 770px;
+                            }
+                        </style><a href="https://embedgooglemap.2yu.co">html embed google map</a>
+                        <style>
+                            .gmap_canvas {
+                                overflow: hidden;
+                                background: none !important;
+                                height: 510px;
+                                width: 770px;
+                            }
+                        </style>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="happy-greeting-wedding-info" class="section-three">
+            <div class="container my-2">
+                <div class="center-content">
+                    <div style="margin-bottom: 10%; margin-top: 10%;" class="sub-section-one-center-content">
+                        <h5 id="small-text-section-three" class="text-center text-light">The Wedding of</h5>
+                        <h1 id="big-text-section-three" class="text-center text-light">Happy <br> Cukurukuk</h1>
+                    </div>
+
+                    <div class="row mb-5 pb-2">
+                        <div class="col">
+                            <p class="text-light couple-parent-information">
+                                Putri dari <br>
+                                Bp Drs.Kiwkiw <br>
+                                Ibu KIwkiw
+                            </p>
+                        </div>
+                        <div class="col">
+                            <div class="d-flex align-items-center justify-content-center">
+                                <a id="slide-down-to-introducing-section"
+                                    class="btn text-light text-center border rounded-5">
+                                    our <br> story <br>
+                                    <i class="fa fa-arrow-down text-light" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p class="text-light couple-parent-information float-end">
+                                Putri dari <br>
+                                Bp Drs.Kiwkiw <br>
+                                Ibu KIwkiw
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Couple Story -->
+        <div id="couple-story-section" class="section-four border" style="display: none;">
+            <div class="container my-2">
+                <div style="position: relative;" class="center-content py-4">
+                    <div class="background-picture-album">
+                        <!-- Slide 1 -->
+                        <div class="row py-5">
+                            <div class="col">
+                                <img id="image" style="height: 40vh;"
+                                    src="https://images.weddingku.com/images/upload/articles/images/u85ctg1srm7p41120191113.jpg"
+                                    alt="">
+                            </div>
+                            <div class="col">
+                                <img id="image" class="float-end" style="height: 40vh;"
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHhO-M92xP7Nv3g24ZP64W7xGaPdB8MdWqDDjstBeF3J9zybJXNBN-8LAmVR24e0x30oY&usqp=CAU"
+                                    alt="">
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="row py-5">
+                            <div class="col">
+                                <img id="image" style="height: 40vh;"
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNCdGZyVagRJsli2AENrjeCxN4Z4SRXged6D4_fgyuauEBs-ceKmuzhp6enTDb7HPpXwc&usqp=CAU"
+                                    alt="">
+                            </div>
+                            <div class="col">
+                                <img id="image" class="float-end" style="height: 40vh;"
+                                    src="https://pinhome-blog-assets-public.s3.amazonaws.com/2021/12/Foto-Prewedding-Hitam-Putih.jpeg"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#" class="float">
+                        <i class="fa fa-angle-up my-float" aria-hidden="true"></i>
+                    </a>
+
+
+
+                    <h1 style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2;"
+                        id="introducing-teks-section-4" class="text-center text-light w-50 d-block mx-auto">
+                        Pada tanggal 14 maret 2021.
+                        Sejak hari itu mereka mulai berbagi rasa atas dasar cinta.
+                        Dan akhirnya pada akhirnya mereka memutuskan untuk lanjut ke meja pelaminan dengan harapan
+                        untuk lebih dalam berbagi cinta, meraih ridho yang maha esa.
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Golden Verse & Wishes -->
+        <div class="section-five d-none">
+            <div class="container my-2">
+                <div class="center-content py-4">
+                    <div class="golden-verse-box">
+                        <p class="text-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit voluptatem
+                            ad
+                            quo laborum veniam blanditiis perferendis nobis impedit mollitia vitae doloribus vero, cum
+                            illo
+                            corporis beatae velit ab accusamus iure! In qui neque delectus, facere asperiores aut quae
+                            quasi
+                            culpa laudantium ab dolor corrupti est sunt repellendus iste hic nisi, vero atque temporibus
+                            earum distinctio similique? Quos alias necessitatibus asperiores! Magnam, cumque blanditiis
+                            temporibus modi quam obcaecati odit doloribus distinctio, natus ratione amet non impedit
+                            necessitatibus! Dolor fugiat, eveniet, iure ab culpa laborum magni magnam consequatur ad ut
+                            itaque aperiam, laboriosam pariatur ducimus? Quaerat itaque iusto minus cupiditate rerum
+                            voluptatibus numquam inventore ratione consequatur autem hic, asperiores nisi unde corrupti
+                            veritatis quia impedit esse distinctio assumenda possimus totam facilis accusantium
+                            voluptates!
+                            Sapiente neque asperiores voluptatibus!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="asset/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="asset/jquery/jquery-3.6.3.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Basic page setup
+            if (performance.navigation.type === 1) {
+                $('html, body').scrollTop(0);
+            }
+
+            // Section one animation
+            $('#small-text-hello').animate({
+                fontSize: '3vh',
+                opacity: '1'
+            }, 300, function () {
+                $('#big-text-hello').animate({
+                    fontSize: '20vh',
+                    opacity: '1'
+                }, 800, function () {
+                    let textToType = `Mengundang untuk hadir dipernikahan kami pada <br>
+                        Minggu, 21 Mei 2029`;
+
+                    function typeText(index) {
+                        if (index < textToType.length) {
+                            $('#sub-small-text-hello').html(textToType.substring(0, index + 1));
+                            $('#sub-small-text-hello').animate({
+                                fontSize: '2.5vh',
+                                opacity: '1'
+                            });
+                            setTimeout(function () {
+                                typeText(index + 1);
+                            }, 30);
+                        }
+                    }
+
+                    typeText(0);
+                });
+            });
+
+            $('#save-date-button').click(function () {
+                $('#other-section-target').slideDown(100, function () {
+                    $('html, body').animate({
+                        scrollTop: $('#other-section-target').offset().top
+                    }, 200);
+                });
+            });
+
+
+            // Section two animation
+            var animatedSectionTwo = false;
+            var sectionTwo = $('#datetime-marriage-info');
+
+            $(window).scroll(function () {
+                let winHeight = $(window).height();
+                let sectionTwoTop = sectionTwo.offset().top;
+                let scroll = $(this).scrollTop();
+
+                if (scroll + winHeight > sectionTwoTop && !animatedSectionTwo) {
+                    animatedSectionTwo = true;
+
+                    sectionTwo.find('#big-text-section-two-akad').animate({
+                        fontSize: '7vh',
+                        opacity: '1'
+                    }, 700, function () {
+                        let paddingX = '1%';
+                        let paddingY = '3%';
+                        $('#akad-date-time-placeOne').animate({
+                            fontSize: '2.2vh',
+                            opacity: '1',
+                            paddingLeft: paddingX,
+                            paddingRight: paddingX,
+                            paddingTop: paddingY,
+                            paddingBottom: paddingY,
+                        }, {
+                            duration: 400,
+                            progress: function (animation, progress, remainingMs) {
+                                if (progress >= 0.5) {
+                                    $('#akad-date-time-placeOne').addClass('border-animation');
+                                }
+                            },
+                            complete: function () {
+                                $('#akad-date-time-placeTwo').animate({
+                                    fontSize: '2.2vh',
+                                    opacity: '1',
+                                    paddingLeft: paddingX,
+                                    paddingRight: paddingX,
+                                    paddingTop: paddingY,
+                                    paddingBottom: paddingY,
+                                }, {
+                                    duration: 400,
+                                    progress: function (animation, progress, remainingMs) {
+                                        if (progress >= 0.5) {
+                                            $('#akad-date-time-placeTwo').addClass('border-animation');
+                                        }
+                                    },
+                                    complete: function () {
+                                        $('#akad-date-time-placeThree').animate({
+                                            fontSize: '2.2vh',
+                                            opacity: '1',
+                                            paddingLeft: paddingX,
+                                            paddingRight: paddingX,
+                                            paddingTop: paddingY,
+                                            paddingBottom: paddingY,
+                                        }, {
+                                            duration: 400,
+                                            progress: function (animation, progress, remainingMs) {
+                                                if (progress >= 0.5) {
+                                                    $('#akad-date-time-placeThree').addClass('border-animation');
+                                                }
+                                            },
+                                            complete: function () {
+                                                $('#big-text-section-two-resepsi').animate({
+                                                    fontSize: '7vh',
+                                                    opacity: '1'
+                                                }, 700, function () {
+                                                    $('#resepsi-date-time-placeThree').animate({
+                                                        fontSize: '2.2vh',
+                                                        opacity: '1',
+                                                        paddingLeft: paddingX,
+                                                        paddingRight: paddingX,
+                                                        paddingTop: paddingY,
+                                                        paddingBottom: paddingY,
+                                                    }, {
+                                                        duration: 400,
+                                                        progress: function (animation, progress, remainingMs) {
+                                                            if (progress >= 0.5) {
+                                                                $('#resepsi-date-time-placeThree').addClass('border-animation')
+                                                            }
+                                                        },
+                                                        complete: function () {
+                                                            $('#resepsi-date-time-placeTwo').animate({
+                                                                fontSize: '2.2vh',
+                                                                opacity: '1',
+                                                                paddingLeft: paddingX,
+                                                                paddingRight: paddingX,
+                                                                paddingTop: paddingY,
+                                                                paddingBottom: paddingY,
+                                                            }, {
+                                                                duration: 400,
+                                                                progress: function (animation, progress, remainingMs) {
+                                                                    if (progress >= 0.5) {
+                                                                        $('#resepsi-date-time-placeTwo').addClass('border-animation')
+                                                                    }
+                                                                },
+                                                                complete: function () {
+                                                                    $('#resepsi-date-time-placeOne').animate({
+                                                                        fontSize: '2.2vh',
+                                                                        opacity: '1',
+                                                                        paddingLeft: paddingX,
+                                                                        paddingRight: paddingX,
+                                                                        paddingTop: paddingY,
+                                                                        paddingBottom: paddingY,
+                                                                    }, {
+                                                                        duration: 400,
+                                                                        progress: function (animation, progress, remainingMs) {
+                                                                            if (progress >= 0.5) {
+                                                                                $('#resepsi-date-time-placeOne').addClass('border-animation')
+                                                                            }
+                                                                        },
+                                                                        complete: function () {
+                                                                            $('#big-text-place-section-two').animate({
+                                                                                fontSize: '4.5vh',
+                                                                                opacity: '1',
+                                                                                paddingLeft: paddingX,
+                                                                                paddingRight: paddingX,
+                                                                                paddingTop: paddingY,
+                                                                                paddingBottom: '3%',
+                                                                            }, {
+                                                                                duration: 400,
+                                                                                complete: function () {
+                                                                                    $('#gmap_canvas').animate({
+                                                                                        width: '100%',
+                                                                                        height: '510'
+                                                                                    }, {
+                                                                                        duration: 400,
+                                                                                    });
+                                                                                }
+                                                                            });
+                                                                        }
+                                                                    });
+                                                                }
+                                                            });
+                                                        }
+                                                    });
+                                                });
+                                            }
+                                        });
+                                    }
+                                });
+                            }
+                        });
+                    });
+                }
+            });
+
+            // Section three animation
+            var animatedSectionThree = false;
+            var sectionThree = $('#happy-greeting-wedding-info');
+
+            $(window).scroll(function () {
+                let winHeight = $(window).height();
+                let sectionThreeTop = sectionThree.offset().top;
+                let scroll = $(this).scrollTop();
+                let paddingsX = '1.8vh';
+                let paddingsY = '2.5vh';
+
+                if (scroll + winHeight > sectionThreeTop && !animatedSectionThree) {
+                    animatedSectionThree = true;
+
+                    var bigTextSectionThree = sectionThree.find('#big-text-section-three');
+
+                    let textToType = `The wedding of`;
+                    function typeText(index) {
+                        if (index < textToType.length) {
+                            $('#small-text-section-three').html(textToType.substring(0, index + 1));
+                            $('#small-text-section-three').animate({
+                                fontSize: '2.5vh',
+                                opacity: '1'
+                            });
+                            setTimeout(function () {
+                                typeText(index + 1);
+                            }, 80);
+                        }
+                    }
+                    typeText(0);
+
+                    $('#big-text-section-three').animate({
+                        fontSize: '15vh',
+                        opacity: '1',
+                    }, {
+                        duration: 1250,
+                        complete: function () {
+                            $('#slide-down-to-introducing-section').animate({
+                                fontSize: '2.6vh',
+                                opacity: '1',
+                                paddingBottom: paddingsY,
+                                paddingTop: paddingsY,
+                                paddingLeft: paddingsX,
+                                paddingRight: paddingsX
+                            }, {
+                                duration: 500,
+                                progress: function (animation, progress, remainingMs) {
+                                    if (progress >= 0.5) {
+                                        $('#slide-down-to-introducing-section').addClass('border-animation')
+                                    }
+                                },
+                                complete: function () {
+                                    $('.couple-parent-information').animate({
+                                        fontSize: '2.5vh',
+                                        opacity: '1'
+                                    }, {
+                                        duration: 1300,
+                                        complete: function () {
+
+                                        }
+                                    });
+                                }
+                            });
+                        }
+                    });
+                }
+            });
+            $('#slide-down-to-introducing-section').click(function () {
+                $('#couple-story-section').slideDown(100, function () {
+                    $('html, body').animate({
+                        scrollTop: $('#couple-story-section').offset().top,
+                    }, 100);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
