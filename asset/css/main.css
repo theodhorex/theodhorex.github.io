@@ -1,31 +1,31 @@
 @font-face {
     font-family: 'Alex Brush';
-    src: url('/Template One/asset/font/Alex_Brush/AlexBrush-Regular.ttf') format('ttf'),
-        url('/Template One/asset/font/Alex_Brush/AlexBrush-Regular.ttf') format('truetype');
+    src: url('asset/font/Alex_Brush/AlexBrush-Regular.ttf') format('ttf'),
+        url('asset/font/Alex_Brush/AlexBrush-Regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Allura';
-    src: url('/Template One/asset/font/Allura/Allura-Regular.ttf') format('ttf'),
-        url('/Template One/asset/font/Allura/Allura-Regular.ttf') format('truetype');
+    src: url('asset/font/Allura/Allura-Regular.ttf') format('ttf'),
+        url('asset/font/Allura/Allura-Regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Elsie';
-    src: url('/Template One/asset/font/Elsie/Elsie-Regular.ttf') format('ttf'),
-        url('/Template One/asset/font/Elsie/Elsie-Regular.ttf') format('truetype');
+    src: url('asset/font/Elsie/Elsie-Regular.ttf') format('ttf'),
+        url('asset/font/Elsie/Elsie-Regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Italianno';
-    src: url('/Template One/asset/font/Italianno/Italianno-Regular.ttf') format('ttf'),
-        url('/Template One/asset/font/Italianno/Italianno-Regular.ttf') format('truetype');
+    src: url('asset/font/Italianno/Italianno-Regular.ttf') format('ttf'),
+        url('asset/font/Italianno/Italianno-Regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Dancing Script';
-    src: url('/Template One/asset/font/Dancing_Script/static/DancingScript-Regular.ttf') format('ttf'),
-        url('/Template One/asset/font/Dancing_Script/static/DancingScript-Regular.ttf') format('truetype');
+    src: url('asset/font/Dancing_Script/static/DancingScript-Regular.ttf') format('ttf'),
+        url('asset/font/Dancing_Script/static/DancingScript-Regular.ttf') format('truetype');
 }
 
 * {
@@ -340,7 +340,7 @@ body {
 }
 
 .event-detail-box {
-    background-image: url('/Template One/asset/bg/geometric-bg.png');
+    background-image: url('asset/bg/geometric-bg.png');
     padding: 5% 0;
 }
 
@@ -641,7 +641,7 @@ body {
 
 /* Section 7 */
 .digiEnve {
-    background-image: url('/Template One/asset/bg/geometric-bg.png');
+    background-image: url('asset/bg/geometric-bg.png');
     background-color: black;
     padding: 3% 0;
 }
