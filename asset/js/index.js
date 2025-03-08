@@ -1,5 +1,5 @@
 function setCountdown(targetDateString) {
-    const targetDate = new Date('2095-5-21');
+    const targetDate = new Date('2029-5-21');
     const timer = setInterval(function () {
         const currentDate = new Date();
         const timeLeft = targetDate - currentDate;
